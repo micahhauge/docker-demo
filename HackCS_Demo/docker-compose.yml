@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  todo_api:
+    build: ./todo-api
+    volumes:
+      - ./todo-api:/usr/src/app
+    ports:
+      - 5001:5001
+
+  db:
+    image: postgres
